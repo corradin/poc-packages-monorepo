@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
+import Image from 'next/image';
+import { Button } from '@corradin/poc-packages-monorepo-ui/dist';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
