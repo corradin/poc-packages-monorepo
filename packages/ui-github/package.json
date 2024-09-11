@@ -18,6 +18,9 @@
     "prepublishOnly": "npm run lint && npm run build",
     "generate:component": "turbo gen react-component"
   },
+  "peerDependencies": {
+    "@corradin/poc-packages-monorepo-ui": "^1.0.3"
+  },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
