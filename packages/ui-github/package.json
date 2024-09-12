@@ -22,6 +22,7 @@
     "@corradin/poc-packages-monorepo-ui": "^1.0.3"
   },
   "devDependencies": {
+    "@corradin/poc-packages-monorepo-ui": "^1.0.3",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@turbo/gen": "^1.12.4",
