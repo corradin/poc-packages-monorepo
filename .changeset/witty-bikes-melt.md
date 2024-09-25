@@ -1,5 +1,5 @@
 ---
-"@corradin/poc-packages-monorepo-ui": patch
+'@corradin/poc-packages-monorepo-ui': patch
 ---
 
-Removed exclamation mark
+Added exclamation mark
