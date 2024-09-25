@@ -1,5 +1,12 @@
 # @corradin/poc-packages-monorepo-ui
 
+## 1.1.3
+
+### Patch Changes
+
+- [504f487](https://github.com/corradin/poc-packages-monorepo/commit/504f4873a56e483b687d99a5a58fec33abb74635): Rewrite card and code for consistency
+- [7cdc538](https://github.com/corradin/poc-packages-monorepo/commit/7cdc5386acbbee686b9fc77c79b32995e8878450): Extended from button props
+
 ## 1.1.2
 
 ### Patch Changes
