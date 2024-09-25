@@ -1,5 +1,11 @@
 # @corradin/poc-packages-monorepo-ui
 
+## 1.2.0
+
+### Minor Changes
+
+- [3ae56a2](https://github.com/corradin/poc-packages-monorepo/commit/3ae56a28b3b661f0d984e1b9498655611d1551bf): Added default export
+
 ## 1.1.3
 
 ### Patch Changes
