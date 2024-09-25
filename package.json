@@ -6,7 +6,8 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "version": "tsc --project .changeset && changeset version"
+    "version": "tsc --project .changeset && changeset version",
+    "publish-packages": "changeset publish"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.8"
