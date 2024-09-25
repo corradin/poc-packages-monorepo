@@ -1,7 +1,7 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
   "changelog": [
-    "./my-changelog-config.ts",
+    "./changelog-config.js",
     { "repo": "corradin/poc-packages-monorepo" }
   ],
   "commit": false,
