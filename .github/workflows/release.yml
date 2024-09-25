@@ -14,6 +14,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    environment: test
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -58,3 +59,4 @@ jobs:
           publish: npm run publish-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_READWRITE_TOKEN }}
