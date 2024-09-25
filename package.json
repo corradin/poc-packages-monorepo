@@ -6,7 +6,7 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "version": "npx tsc ./changelog-config.ts && npx changeset version"
+    "version": "npx tsc ./changeset/changelog-config.ts && npx changeset version"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
