@@ -1,14 +1,16 @@
-export function Card({
-  className,
-  title,
-  children,
-  href,
-}: {
+type CardProps = {
   className?: string;
   title: string;
   children: React.ReactNode;
   href: string;
-}): JSX.Element {
+};
+
+export const Card = ({
+  className,
+  title,
+  children,
+  href,
+}: CardProps): JSX.Element => {
   return (
     <a
       className={className}
@@ -22,4 +24,4 @@ export function Card({
       <p>{children}</p>
     </a>
   );
-}
+};
