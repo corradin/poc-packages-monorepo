@@ -1,5 +1,7 @@
 # @corradin/poc-packages-monorepo-ui-github
 
+## 1.0.6
+
 ## 1.0.5
 
 ## 1.0.4

@@ -1,5 +1,11 @@
 # @corradin/poc-packages-monorepo-ui
 
+## 1.1.2
+
+### Patch Changes
+
+- [7294c2b](https://github.com/corradin/poc-packages-monorepo/commit/7294c2bd0086a93952f05ddb6f3a59f52f802d8e): Added exclamation mark
+
 ## 1.1.1
 
 ### Patch Changes
