@@ -38,4 +38,4 @@ yarn-error.log*
 *.pem
 
 # Changeset generated
-./changeset/changelog-config.js
+.changeset/changelog-config.js
