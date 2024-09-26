@@ -53,8 +53,7 @@ jobs:
       - name: Set npm access
         run: |
           cat << EOF > "$HOME/.npmrc"
-            email=my@email.com
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            @corradin:registry.npmjs.org/:_authToken=$NPM_TOKEN
           EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_READWRITE_TOKEN }}
