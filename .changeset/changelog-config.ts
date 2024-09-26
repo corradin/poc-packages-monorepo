@@ -5,9 +5,9 @@ import {
   VersionType,
 } from '@changesets/types';
 
-type ChangelogOpts = Record<'repo', string> | null;
+export type ChangelogOpts = Record<'repo', string> | null;
 
-const getReleaseLine = async (
+export const getReleaseLine = async (
   changeset: NewChangesetWithCommit,
   _type: VersionType,
   changelogOpts: ChangelogOpts
@@ -24,7 +24,7 @@ const getReleaseLine = async (
   return returnVal;
 };
 
-const getDependencyReleaseLine = async (
+export const getDependencyReleaseLine = async (
   changesets: NewChangesetWithCommit[],
   dependenciesUpdated: ModCompWithPackage[],
   changelogOpts: ChangelogOpts
