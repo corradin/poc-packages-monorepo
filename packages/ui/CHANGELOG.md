@@ -1,5 +1,11 @@
 # @corradin/poc-packages-monorepo-ui
 
+## 1.3.0
+
+### Minor Changes
+
+- [10b4366](https://github.com/corradin/poc-packages-monorepo/commit/10b4366c36cc5f68e05f2478252e8898213c1ed7): Removed button html props
+
 ## 1.2.0
 
 ### Minor Changes
