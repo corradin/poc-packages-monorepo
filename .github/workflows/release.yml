@@ -63,7 +63,7 @@ jobs:
         with:
           version: npm run version
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish: npm run publish-packages
+          publish: npm run publish-packages -- --otp $NPM_TOKEN
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_READWRITE_TOKEN }}
