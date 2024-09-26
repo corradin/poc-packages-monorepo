@@ -50,13 +50,16 @@ jobs:
         run: npm ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
-      - name: Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          version: npm run version
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish: npm run publish-packages
+      # - name: Publish to npm
+      #   id: changesets
+      #   uses: changesets/action@v1
+      #   with:
+      #     version: npm run version
+      #     # This expects you to have a script called release which does a build for your packages and calls changeset publish
+      #     publish: npm run publish-packages
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_TOKEN: ${{ secrets.NPM_READWRITE_TOKEN }}
+      - run: cd packages/ui && npm publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_READWRITE_TOKEN }}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
