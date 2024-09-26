@@ -2,7 +2,7 @@ import {
   ChangelogOpts,
   getReleaseLine,
   getDependencyReleaseLine,
-} from '../changelog-config';
+} from '../.changeset/changelog-config';
 import {
   ModCompWithPackage,
   NewChangesetWithCommit,
