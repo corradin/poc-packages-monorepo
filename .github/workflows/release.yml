@@ -50,6 +50,10 @@ jobs:
         run: npm ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
+      - name: Print something to console
+        run: echo "Hello, token is $NODE_AUTH_TOKEN"
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
       - name: Publish to npm
         id: changesets
         uses: changesets/action@v1
