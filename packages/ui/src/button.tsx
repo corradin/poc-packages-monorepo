@@ -6,7 +6,7 @@ type ButtonProps = {
   children: ReactNode;
   className?: string;
   appName?: string;
-} & React.ComponentProps<'button'>;
+};
 
 export const Button = ({ children, className, appName }: ButtonProps) => {
   return (
@@ -18,5 +18,3 @@ export const Button = ({ children, className, appName }: ButtonProps) => {
     </button>
   );
 };
-
-export default Button;
