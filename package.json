@@ -1,6 +1,6 @@
 {
   "name": "poc-packages-monorepo",
-  "private": false,
+  "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
