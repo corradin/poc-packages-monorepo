@@ -7,7 +7,7 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "version": "tsc --project .changeset && changeset version",
-    "publish-packages": "cd packages/ui && npm publish"
+    "publish-packages": "changeset publish"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.8"
