@@ -1,5 +1,12 @@
 # web
 
+## 0.1.9
+
+### Patch Changes
+
+- Updated dependencies [5bcc2f0](https://github.com/corradin/poc-packages-monorepo/commit/5bcc2f0f77c328eda84f5266b292fe6d18dd1e29)
+  - @corradin/poc-packages-monorepo-ui@1.3.3
+
 ## 0.1.8
 
 ### Patch Changes
