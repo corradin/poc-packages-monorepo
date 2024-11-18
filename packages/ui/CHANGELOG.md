@@ -1,5 +1,11 @@
 # @corradin/poc-packages-monorepo-ui
 
+## 1.3.4
+
+### Patch Changes
+
+- [8375376](https://github.com/corradin/poc-packages-monorepo/commit/837537645c3aa959607c528b543ef126ead72988): Test with Github App
+
 ## 1.3.3
 
 ### Patch Changes
