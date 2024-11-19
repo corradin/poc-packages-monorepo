@@ -57,7 +57,7 @@ jobs:
         run: npm ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
-      - name: Publish to npm
+      - name: Publish to NPM
         id: changesets
         uses: changesets/action@v1
         with:
