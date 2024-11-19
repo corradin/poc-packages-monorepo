@@ -54,6 +54,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
       - name: Lint
         run: npm run lint
+      - name: Show actor
+        run: echo ${{ github.actor }}
       - name: Enable auto-merge for Dependabot PRs
         if: ${{ github.actor == 'poc-packages-monorepo-app-token' }}
         run: gh pr merge --auto --rebase "$PR_URL"
