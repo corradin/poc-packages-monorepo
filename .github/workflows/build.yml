@@ -56,11 +56,11 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Install Dependencies
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: npm cid
+        run: npm ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
       - name: Lint
-        run: npm run lint
+        run: npm run lints
       - name: approve
         if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
         run: gh pr review --approve "$PR_URL"
