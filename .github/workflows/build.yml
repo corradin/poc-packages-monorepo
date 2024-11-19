@@ -61,15 +61,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
       - name: Lint
         run: npm run lint
-      - name: approve
-        if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
-        run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GH_TOKEN: ${{ steps.app-token.outputs.token }}
       - name: Enable auto-merge for Dependabot PRs
         if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
-        run: gh pr merge --auto --rebase "$PR_URL"
+        run: gh pr merge --admin --rebase "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
