@@ -60,7 +60,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
       - name: Lint
-        run: npm run lints
+        run: npm run lint
       - name: approve
         if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
         run: gh pr review --approve "$PR_URL"
