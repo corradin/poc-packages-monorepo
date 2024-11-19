@@ -67,9 +67,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
-      - name: Enable auto-merge for Dependabot PRs
-        if: ${{ github.actor == 'poc-packages-monorepo-app-token' }}
-        run: gh pr merge --auto --rebase "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
