@@ -56,11 +56,14 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Install Dependencies
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm cid
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
       - name: Lint
         run: npm run lint
+      - name: approve
+        if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
+        run: gh pr review --approve "$PR_URL"
       - name: Enable auto-merge for Dependabot PRs
         if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
         run: gh pr merge --auto --rebase "$PR_URL"
