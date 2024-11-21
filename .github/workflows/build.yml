@@ -61,7 +61,12 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
       - name: Lint
         run: npm run lint
-      - name: Enable auto-merge for Dependabot PRs
+  merge:
+    name: Merge
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Auto-merge PR
         if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
         run: gh pr merge --admin --rebase "$PR_URL"
         env:
