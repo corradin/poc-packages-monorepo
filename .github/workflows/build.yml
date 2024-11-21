@@ -64,8 +64,16 @@ jobs:
   merge:
     name: Merge
     runs-on: ubuntu-latest
+    environment: test
     needs: build
     steps:
+      - name: Create Github App Token
+        if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
+        uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Auto-merge PR
         if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
         run: gh pr merge --admin --rebase "$PR_URL"
