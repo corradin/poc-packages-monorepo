@@ -6,8 +6,9 @@ on:
       - Build
     types:
       - completed
-    branches-ignore:
-      - main
+    branches:
+      - changeset-release/main
+      - chore/changeset-lockfile-update
 
 jobs:
   merge:
@@ -22,6 +23,10 @@ jobs:
         with:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
       - name: Auto-merge PR
         if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
         run: gh pr merge --admin --rebase "$PR_URL"
