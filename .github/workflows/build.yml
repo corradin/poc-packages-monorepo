@@ -64,9 +64,12 @@ jobs:
   merge:
     name: Merge
     runs-on: ubuntu-latest
+    environment: test
     needs: build
     steps:
-      - uses: actions/create-github-app-token@v1
+      - name: Create Github App Token
+        if: ${{ github.actor == 'poc-packages-monorepo-app-token[bot]' }}
+        uses: actions/create-github-app-token@v1
         id: app-token
         with:
           app-id: ${{ vars.APP_ID }}
