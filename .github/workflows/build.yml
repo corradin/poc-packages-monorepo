@@ -48,11 +48,11 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - name: Use Node.js $NODE_VERSION
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
           always-auth: true
-          node-version: $NODE_VERSION
+          node-version: ${{ env.NODE_VERSION }}
           registry-url: https://registry.npmjs.org
       - name: Install Dependencies
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
@@ -64,7 +64,7 @@ jobs:
   merge:
     needs: build
     if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
-    uses: corradin/poc-packages-monorepo/.github/workflows/merge.yml@main
+    uses: ./.github/workflows/merge.yml
     with:
-      app-id: $APP_ID
+      app-id: ${{ env.APP_ID }}
     secrets: inherit
