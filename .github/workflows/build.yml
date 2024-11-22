@@ -8,7 +8,6 @@ on:
     types: [opened, synchronize, reopened]
 
 env:
-  APP_ID: ${{ vars.APP_ID }}
   NODE_VERSION: lts/*
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
@@ -21,7 +20,7 @@ jobs:
       - uses: actions/create-github-app-token@v1
         id: app-token
         with:
-          app-id: ${{ env.APP_ID }}
+          app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -66,5 +65,5 @@ jobs:
     if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
     uses: ./.github/workflows/merge.yml
     with:
-      app-id: ${{ env.APP_ID }}
+      app-id: ${{ vars.APP_ID }}
     secrets: inherit
