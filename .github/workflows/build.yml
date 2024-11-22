@@ -67,4 +67,4 @@ jobs:
     uses: corradin/poc-packages-monorepo/.github/workflows/merge.yml@main
     with:
       app-id: $APP_ID
-      secrets: inherit
+    secrets: inherit
