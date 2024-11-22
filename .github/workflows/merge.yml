@@ -1,6 +1,14 @@
 name: Merge PR
 
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      app-id:
+        required: true
+        type: string
+    secrets:
+      private_key:
+        required: true
 
 jobs:
   merge:
@@ -12,8 +20,8 @@ jobs:
         uses: actions/create-github-app-token@v1
         id: app-token
         with:
-          app-id: ${{ vars.APP_ID }}
-          private-key: ${{ secrets.PRIVATE_KEY }}
+          app-id: ${{ inputs.app-id }}
+          private-key: ${{ secrets.private_key }}
       - name: Auto-merge PR
         run: gh pr merge --admin --rebase "$PR_URL"
         env:
