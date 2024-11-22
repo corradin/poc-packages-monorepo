@@ -66,5 +66,5 @@ jobs:
     if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
     uses: corradin/poc-packages-monorepo/.github/workflows/merge.yml@main
     with:
-      app-id: ${{ env.APP_ID }}
+      app-id: $APP_ID
     secrets: inherit
