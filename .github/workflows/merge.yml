@@ -1,7 +1,6 @@
 name: Merge PR
 
-on:
-  workflow_call:
+on: workflow_call
 
 jobs:
   merge:
