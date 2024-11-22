@@ -62,5 +62,6 @@ jobs:
       - name: Lint
         run: npm run lint
   merge:
+    needs: build
     if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
     uses: corradin/poc-packages-monorepo/.github/workflows/merge.yml@main
