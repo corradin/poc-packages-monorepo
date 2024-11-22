@@ -61,7 +61,10 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
       - name: Lint
         run: npm run lint
-  # merge:
-  #   needs: build
-  #   if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
-  #   uses: corradin/poc-packages-monorepo/.github/workflows/merge.yml@main
+  merge:
+    needs: build
+    if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
+    uses: corradin/poc-packages-monorepo/.github/workflows/merge.yml@main
+    with:
+      app-id: ${{ vars.APP_ID }}
+      secrets: inherit
