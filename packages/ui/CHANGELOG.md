@@ -1,5 +1,11 @@
 # @corradin/poc-packages-monorepo-ui
 
+## 1.3.14
+
+### Patch Changes
+
+- [6e77a4a](https://github.com/corradin/poc-packages-monorepo/commit/6e77a4af0675006644016d2bd563f0e8df4ccf75): Minor test for auto PR merging
+
 ## 1.3.13
 
 ### Patch Changes
