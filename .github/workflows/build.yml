@@ -63,7 +63,7 @@ jobs:
         run: |
           {
             echo 'COMMIT_MSG<<EOF'
-            echo "${{github.event.head_commit.message}}"
+            [ ! -z "${{github.event.head_commit.message}}" ] && echo "${{github.event.head_commit.message}}" || echo "${{github.event.pull_request.title}}"
             echo EOF
           } >> "$GITHUB_ENV"
            [ ! -z "${{github.event.head_commit.message}}" ] && echo "${{github.event.head_commit.message}}" || echo "${{github.event.pull_request.title}}"
