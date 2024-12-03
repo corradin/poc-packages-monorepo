@@ -1,5 +1,11 @@
 # @corradin/poc-packages-monorepo-ui
 
+## 1.3.13
+
+### Patch Changes
+
+- [1f6e502](https://github.com/corradin/poc-packages-monorepo/commit/1f6e502ee95116ecb6c1bc67a7c71420253aa83c): tried git command for showing head commit
+
 ## 1.3.12
 
 ### Patch Changes
