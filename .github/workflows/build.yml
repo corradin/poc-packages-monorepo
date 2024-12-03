@@ -63,16 +63,16 @@ jobs:
         run: |
           {
             echo 'COMMIT_MSG<<EOF'
-            echo "${{github.event.head_commit.message}}"
+            git show -s --format=%s
             echo EOF
           } >> "$GITHUB_ENV"
       - name: Lint
         if: ${{ !(startsWith(env.COMMIT_MSG, env.CHANGESET_COMMIT_MSG)) }}
         run: npm run lint
-  merge:
-    needs: build
-    if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
-    uses: ./.github/workflows/merge.yml
-    with:
-      app-id: ${{ vars.APP_ID }}
-    secrets: inherit
+  # merge:
+  #   needs: build
+  #   if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
+  #   uses: ./.github/workflows/merge.yml
+  #   with:
+  #     app-id: ${{ vars.APP_ID }}
+  #   secrets: inherit
