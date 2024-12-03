@@ -67,7 +67,7 @@ jobs:
             echo EOF
           } >> "$GITHUB_ENV"
       - name: Lint
-        if: ${{ !startsWith(env.COMMIT_MSG, env.CHANGESET_COMMIT_MSG) }}
+        if: ${{ !(startsWith(env.COMMIT_MSG, env.CHANGESET_COMMIT_MSG)) }}
         run: npm run lint
   merge:
     needs: build
