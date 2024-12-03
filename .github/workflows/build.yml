@@ -66,14 +66,13 @@ jobs:
             [ ! -z "${{github.event.head_commit.message}}" ] && echo "${{github.event.head_commit.message}}" || echo "${{github.event.pull_request.title}}"
             echo EOF
           } >> "$GITHUB_ENV"
-           [ ! -z "${{github.event.head_commit.message}}" ] && echo "${{github.event.head_commit.message}}" || echo "${{github.event.pull_request.title}}"
       - name: Lint
         if: ${{ !(startsWith(env.COMMIT_MSG, env.CHANGESET_COMMIT_MSG)) }}
         run: npm run lint
-  # merge:
-  #   needs: build
-  #   if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
-  #   uses: ./.github/workflows/merge.yml
-  #   with:
-  #     app-id: ${{ vars.APP_ID }}
-  #   secrets: inherit
+  merge:
+    needs: build
+    if: ${{ github.event_name == 'pull_request' && github.actor == 'poc-packages-monorepo-app-token[bot]' }}
+    uses: ./.github/workflows/merge.yml
+    with:
+      app-id: ${{ vars.APP_ID }}
+    secrets: inherit
