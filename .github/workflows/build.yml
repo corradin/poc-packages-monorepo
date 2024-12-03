@@ -63,10 +63,11 @@ jobs:
         run: |
           {
             echo 'COMMIT_MSG<<EOF'
-            git show -s --format=%s
+            echo "${{github.event.head_commit.message}}"
             echo EOF
           } >> "$GITHUB_ENV"
-           git show -s --format=%s
+           echo "${{github.event.head_commit.message}}"
+           echo "${{github.event.pull_request.head.sha}}"
       - name: Lint
         if: ${{ !(startsWith(env.COMMIT_MSG, env.CHANGESET_COMMIT_MSG)) }}
         run: npm run lint
