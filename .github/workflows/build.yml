@@ -66,7 +66,6 @@ jobs:
             [ ! -z "${{github.event.head_commit.message}}" ] && echo "${{github.event.head_commit.message}}" || echo "${{github.event.pull_request.title}}"
             echo EOF
           } >> "$GITHUB_ENV"
-           [ ! -z "${{github.event.head_commit.message}}" ] && echo "${{github.event.head_commit.message}}" || echo "${{github.event.pull_request.title}}"
       - name: Lint
         if: ${{ !(startsWith(env.COMMIT_MSG, env.CHANGESET_COMMIT_MSG)) }}
         run: npm run lint
