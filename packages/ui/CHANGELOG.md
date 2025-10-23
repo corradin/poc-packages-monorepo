@@ -1,5 +1,15 @@
 # @corradin/poc-packages-monorepo-ui
 
+## 1.3.20
+
+### Patch Changes
+
+- [0b63b7b](https://github.com/corradin/poc-packages-monorepo/commit/0b63b7b5980290e7c6884a1735dfec52dde0eefc): Testing without token
+- [0b63b7b](https://github.com/corradin/poc-packages-monorepo/commit/0b63b7b5980290e7c6884a1735dfec52dde0eefc): Testing OIDC with empty token
+- [0b63b7b](https://github.com/corradin/poc-packages-monorepo/commit/0b63b7b5980290e7c6884a1735dfec52dde0eefc): Sample patch bump for OIDC
+- [0b63b7b](https://github.com/corradin/poc-packages-monorepo/commit/0b63b7b5980290e7c6884a1735dfec52dde0eefc): Reverted to token
+- [0b63b7b](https://github.com/corradin/poc-packages-monorepo/commit/0b63b7b5980290e7c6884a1735dfec52dde0eefc): Another test to trigger changeset
+
 ## 1.3.19
 
 ### Patch Changes
