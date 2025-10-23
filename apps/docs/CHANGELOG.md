@@ -1,5 +1,15 @@
 # docs
 
+## 0.1.22
+
+### Patch Changes
+
+- Updated dependencies [f3a74ae](https://github.com/corradin/poc-packages-monorepo/commit/f3a74aeec53f333c9293eb44dea56756f68d089b)
+- Updated dependencies [f3a74ae](https://github.com/corradin/poc-packages-monorepo/commit/f3a74aeec53f333c9293eb44dea56756f68d089b)
+- Updated dependencies [f3a74ae](https://github.com/corradin/poc-packages-monorepo/commit/f3a74aeec53f333c9293eb44dea56756f68d089b)
+- Updated dependencies [f3a74ae](https://github.com/corradin/poc-packages-monorepo/commit/f3a74aeec53f333c9293eb44dea56756f68d089b)
+  - @corradin/poc-packages-monorepo-ui@1.3.19
+
 ## 0.1.21
 
 ### Patch Changes
