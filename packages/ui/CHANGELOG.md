@@ -1,5 +1,13 @@
 # @corradin/poc-packages-monorepo-ui
 
+## 1.3.16
+
+### Patch Changes
+
+- [94cd245](https://github.com/corradin/poc-packages-monorepo/commit/94cd24596ded2adc547d8b207781b185a1e9e963): Sample patch bump for OIDC
+- [94cd245](https://github.com/corradin/poc-packages-monorepo/commit/94cd24596ded2adc547d8b207781b185a1e9e963): Reverted to token
+- [94cd245](https://github.com/corradin/poc-packages-monorepo/commit/94cd24596ded2adc547d8b207781b185a1e9e963): Another test to trigger changeset
+
 ## 1.3.15
 
 ### Patch Changes
