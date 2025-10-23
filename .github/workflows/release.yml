@@ -1,8 +1,4 @@
 name: Release
-permissions:
-  contents: write
-  id-token: write
-  pull-requests: write
 
 on:
   push:
@@ -71,6 +67,7 @@ jobs:
           publish: npm run publish-packages
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_READWRITE_TOKEN}}
       - name: Store head commit message
         run: |
           {
